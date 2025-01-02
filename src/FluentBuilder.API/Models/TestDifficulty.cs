@@ -1,6 +1,8 @@
 ﻿namespace FluentBuilder.API.Models;
 
-public class TestDifficulty
+public enum TestDifficulty
 {
-    
+    Low,
+    Medium,
+    High
 }

@@ -1,3 +1,4 @@
+using FluentBuilder.API.Builders;
 using FluentBuilder.API.Models;
 using FluentBuilder.API.Requests;
 
@@ -27,6 +28,24 @@ app.MapPost("/api/test", (CreateTestRequest createTestRequest) =>
             QuestionCount = s.QuestionCount
         }).ToList()
     };
+
+    return Results.Ok(test);
+});
+
+app.MapPost("/api/test/with-builder", (CreateTestRequest createTestRequest) =>
+{
+    var test = new TestBuilder()
+        .WithBasicInfo(
+            createTestRequest.TestName,
+            createTestRequest.Description,
+            createTestRequest.StartDate,
+            createTestRequest.EndDate)
+        .WithIsActive(createTestRequest.IsActive)
+        .WithTags(createTestRequest.Tags)
+        .WithDifficulty(createTestRequest.Difficulty)
+        .WithMaxParticipants(createTestRequest.MaxParticipants)
+        .WithSections(createTestRequest.Sections)
+        .Build();
 
     return Results.Ok(test);
 });
