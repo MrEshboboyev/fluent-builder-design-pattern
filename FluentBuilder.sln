@@ -1,8 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F9005D10-A073-40B2-A369-EE6EA570D154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilder.API", "src\FluentBuilder.API\FluentBuilder.API.csproj", "{78109947-E30D-42FF-B9BA-33114FA33451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78109947-E30D-42FF-B9BA-33114FA33451} = {F9005D10-A073-40B2-A369-EE6EA570D154}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78109947-E30D-42FF-B9BA-33114FA33451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78109947-E30D-42FF-B9BA-33114FA33451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78109947-E30D-42FF-B9BA-33114FA33451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78109947-E30D-42FF-B9BA-33114FA33451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
